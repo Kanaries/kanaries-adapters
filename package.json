@@ -1,14 +1,18 @@
 {
   "name": "@kanaries/adapters",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "build/node/index.js",
   "module": "build/browser/index.js",
-  "types": "src/browser/index.d.ts",
+  "types": "build/browser/index.d.ts",
   "scripts": {
     "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json"
   },
+  "browser": {
+    "build/node/index.js": "build/browser/index.js"
+  },
   "keywords": [],
+
   "author": "",
   "license": "Apache2.0",
   "devDependencies": {
